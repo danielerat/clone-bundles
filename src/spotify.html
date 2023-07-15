@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collections</title>
+    <link href="styles/tailwindstyle.css" rel="stylesheet" />
+  </head>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <body>
+    <main
+      class="grid h-screen grid-cols-12 grid-rows-6 overflow-hidden text-white"
+    >
+      <!-- Left Section -->
+      <section class="col-span-3 row-span-5 h-full bg-black text-xs">
+        <main class="flex h-full flex-col justify-between gap-3 p-2">
+          <!-- Top Search Section -->
+          <div
+            class="basis-1/12 rounded-lg bg-neutral-900 p-2 text-sm md:text-lg"
+          >
+            <div class="flex justify-start gap-4">
+              <i class="fa-solid fa-house"></i>
+              <p class="invisible sm:visible">Home</p>
+            </div>
+            <div class="flex justify-start gap-4">
+              <spn><i class="fa-solid fa-magnifying-glass"></i></spn>
+              <p class="invisible sm:visible">Search</p>
+            </div>
+          </div>
+          <!-- Bottom Section -->
+          <div
+            class="basis-11/12 overflow-hidden rounded-lg bg-neutral-900 p-2"
+          >
+            <main class="">
+              <!-- Section------------------------ -->
+              <div
+                class="my-2 flex cursor-pointer justify-around text-sm md:text-sm"
+              >
+                <div class="flex gap-2">
+                  <p><i class="bi bi-music-note-list"></i></p>
+                  <p class="hidden md:block">Your Library</p>
+                </div>
+                <div class="flex gap-3">
+                  <p><i class="fa-solid fa-plus"></i></p>
+                  <p><i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+              </div>
+
+              <!-- ----------------- -->
+              <!-- Section Album ----------------- -->
+              <div class="my-2 flex justify-start gap-1 overflow-x-auto">
+                <div
+                  class="cursor-pointer rounded-lg bg-zinc-800 p-1 hover:bg-zinc-950"
+                >
+                  Playlist
+                </div>
+                <div
+                  class="cursor-pointer rounded-lg bg-zinc-800 p-1 hover:bg-zinc-950"
+                >
+                  Albums
+                </div>
+                <div
+                  class="cursor-pointer rounded-lg bg-zinc-800 p-1 hover:bg-zinc-950"
+                >
+                  Artists
+                </div>
+              </div>
+              <!--  ------------------ -->
+              <!-- Section search -->
+              <div class="my-4 flex justify-between">
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input
+                    type="text"
+                    placeholder="Dangerou"
+                    class="w-3/4 border-none bg-transparent outline-none"
+                  />
+                </div>
+                <div class="hidden gap-1 sm:flex">
+                  <span>Recents</span>
+                  <i class="fa-solid fa-sort-down"></i>
+                </div>
+              </div>
+              <!-- --------------- -->
+            </main>
+            <!-- Songs Section --------------->
+            <main id="playlist" class="my-8 h-full overflow-y-auto">
+              <div
+                class="flex cursor-pointer items-center justify-center gap-2 rounded-xl p-2 hover:bg-gray-900 sm:justify-start"
+              >
+                <div>
+                  <img
+                    src="https://t2.genius.com/unsafe/600x600/https%3A%2F%2Fimages.genius.com%2F01909963b34de9cf80e3f611b82176d2.600x600x1.jpg"
+                    alt=""
+                    class="contain w-16 rounded-full object-cover sm:w-10 md:w-20"
+                  />
+                </div>
+                <div class="hidden text-xs sm:block">
+                  <h3 class="font-bold">Youssoupha</h3>
+                  <p>Noir Desire</p>
+                </div>
+              </div>
+
+              <div
+                class="flex cursor-pointer items-center justify-center gap-2 rounded-xl p-2 hover:bg-gray-900 sm:justify-start"
+              >
+                <div>
+                  <img
+                    src="https://m.media-amazon.com/images/I/417obblvAyL._SX300_SY300_QL70_ML2_.jpg"
+                    alt=""
+                    class="contain w-16 rounded-full object-cover sm:w-10 md:w-20"
+                  />
+                </div>
+                <div class="hidden text-xs sm:block">
+                  <h3 class="font-bold">Lomepal</h3>
+                  <p>Amina</p>
+                </div>
+              </div>
+              <div
+                class="flex cursor-pointer items-center justify-center gap-2 rounded-xl p-2 hover:bg-gray-900 sm:justify-start"
+              >
+                <div>
+                  <img
+                    src="https://static.fnac-static.com/multimedia/Images/FR/NR/d3/b8/8b/9156819/1540-1/tsp20171027161512/La-Femme-Ideale-Inclus-coupon-MP3.jpg"
+                    alt=""
+                    class="contain w-16 rounded-lg object-cover sm:w-10 md:w-20"
+                  />
+                </div>
+                <div class="hidden text-xs sm:block">
+                  <h3 class="font-bold">This is Ben Mazue</h3>
+                  <p>Playlist - Spofify</p>
+                </div>
+              </div>
+
+              <div
+                class="flex cursor-pointer items-center justify-center gap-2 rounded-xl p-2 hover:bg-gray-900 sm:justify-start"
+              >
+                <div>
+                  <img
+                    src="https://m.media-amazon.com/images/I/417obblvAyL._SX300_SY300_QL70_ML2_.jpg"
+                    alt=""
+                    class="contain w-16 rounded-full object-cover sm:w-10 md:w-20"
+                  />
+                </div>
+                <div class="hidden text-xs sm:block">
+                  <h3 class="font-bold">Lomepal</h3>
+                  <p>Amina</p>
+                </div>
+              </div>
+
+              <div
+                class="flex cursor-pointer items-center justify-center gap-2 rounded-xl p-2 hover:bg-gray-900 sm:justify-start"
+              >
+                <div>
+                  <img
+                    src="https://t2.genius.com/unsafe/600x600/https%3A%2F%2Fimages.genius.com%2F01909963b34de9cf80e3f611b82176d2.600x600x1.jpg"
+                    alt=""
+                    class="contain w-16 rounded-full object-cover sm:w-10 md:w-20"
+                  />
+                </div>
+                <div class="hidden text-xs sm:block">
+                  <h3 class="font-bold">Youssoupha</h3>
+                  <p>Noir Desire</p>
+                </div>
+              </div>
+
+              <div
+                class="flex cursor-pointer items-center justify-center gap-2 rounded-xl p-2 hover:bg-gray-900 sm:justify-start"
+              >
+                <div>
+                  <img
+                    src="https://m.media-amazon.com/images/I/417obblvAyL._SX300_SY300_QL70_ML2_.jpg"
+                    alt=""
+                    class="contain w-16 rounded-full object-cover sm:w-10 md:w-20"
+                  />
+                </div>
+                <div class="hidden text-xs sm:block">
+                  <h3 class="font-bold">Lomepal</h3>
+                  <p>Amina</p>
+                </div>
+              </div>
+            </main>
+          </div>
+          <!-- ------------- -->
+        </main>
+      </section>
+      <!-- Right Section -->
+      <section
+        class="col-span-9 row-span-5 h-full overflow-y-scroll bg-gradient-to-b from-red-500 to-black"
+      >
+        <section>
+          <section class="flex justify-between p-4">
+            <div class="flex gap-2 text-lg">
+              <i
+                class="bi bi-people w-7 rounded-full bg-slate-700/50 text-center"
+              ></i>
+              <i
+                class="bi bi-person-circle w-7 rounded-full bg-slate-700/50 text-center"
+              ></i>
+            </div>
+            <div class="flex gap-2 text-lg">
+              <i
+                class="bi bi-people w-7 rounded-full bg-slate-700/50 text-center"
+              ></i>
+              <i
+                class="bi bi-person-circle w-7 rounded-full bg-slate-700/50 text-center"
+              ></i>
+            </div>
+          </section>
+          <section class="flex items-center gap-4">
+            <img
+              src="https://m.media-amazon.com/images/I/81it+V14HAL._SL1500_.jpg"
+              alt=""
+              class="w-2/6 shadow-2xl shadow-black"
+            />
+            <div class="flex flex-col justify-end">
+              <div class="mb-10">
+                <p class="font-medium">Album</p>
+                <p class="text-4xl font-extrabold md:text-6xl">AMINA</p>
+              </div>
+              <div class="flex items-center gap-1 text-xs font-bold">
+                <img
+                  src="https://www.letelegramme.fr/images/2019/01/23/lomepal-trouver-l-emotion_4383457_676x545p.jpg?v=1"
+                  class="h-6 w-6 rounded-full"
+                />
+                <p>Lomepal . 2018 . 29 songs, 1hr 33min</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section down -->
+          <section class="flex items-center gap-3 p-2">
+            <div>
+              <i
+                class="bi bi-pause-circle-fill text-5xl hover:text-green-600"
+              ></i>
+            </div>
+            <div>
+              <i class="bi bi-suit-heart-fill text-3xl hover:text-green-600">
+              </i>
+            </div>
+            <div><i class="bi bi-cloud-arrow-down text-2xl"></i></div>
+            <div class="text-2xl"><i class="bi bi-three-dots"></i></div>
+          </section>
+          <!-- Section Songs list -->
+
+          <section>
+            <table class="w-full">
+              <thead class="border-b border-gray-500">
+                <tr class="">
+                  <th>#</th>
+                  <th>Title</th>
+                  <th class="invisible sm:visible">Plays</th>
+                  <th><i class="bi bi-clock-history"></i></th>
+                </tr>
+              </thead>
+              <tbody id="songs">
+                <tr class="cursor-pointer hover:bg-slate-50/5">
+                  <td>1</td>
+                  <td>
+                    <p class="text-lg font-bold">Intro Mamaz</p>
+                    <p class="text-xs font-extralight">Lomepal, Caballero</p>
+                  </td>
+                  <td class="invisible sm:visible">44,084349</td>
+                  <td>2:51</td>
+                </tr>
+
+                <tr class="cursor-pointer hover:bg-slate-50/5">
+                  <td>2</td>
+                  <td>
+                    <p class="text-lg font-bold">Beau La folie</p>
+                    <p class="text-xs font-extralight">Lomepal</p>
+                  </td>
+                  <td class="invisible sm:visible">44,084349</td>
+                  <td>3:1</td>
+                </tr>
+
+                <tr class="cursor-pointer hover:bg-slate-50/5">
+                  <td>3</td>
+                  <td>
+                    <p class="text-lg font-bold">Trop Beau la vie</p>
+                    <p class="text-xs font-extralight">Lomepal,Romeo Elvis</p>
+                  </td>
+                  <td class="invisible sm:visible">784,084349</td>
+                  <td>2:59</td>
+                </tr>
+                <tr class="cursor-pointer hover:bg-slate-50/5">
+                  <td>4</td>
+                  <td>
+                    <p class="text-lg font-bold">cinq doingts</p>
+                    <p class="text-xs font-extralight">
+                      Lomepal,Philippe keterine
+                    </p>
+                  </td>
+                  <td class="invisible sm:visible">784,084349</td>
+                  <td>2:59</td>
+                </tr>
+
+                <tr class="cursor-pointer hover:bg-slate-50/5">
+                  <td><i class="bi bi-soundwave text-green-400"></i></td>
+                  <td>
+                    <p class="text-lg font-bold">La verite</p>
+                    <p class="text-xs font-extralight">Lomepal,Orelsan</p>
+                  </td>
+                  <td class="invisible sm:visible">39,084349</td>
+                  <td>2:51</td>
+                </tr>
+                <tr class="cursor-pointer hover:bg-slate-50/5">
+                  <td>6</td>
+                  <td>
+                    <p class="text-lg font-bold">Beau La folie</p>
+                    <p class="text-xs font-extralight">Lomepal</p>
+                  </td>
+                  <td class="invisible sm:visible">44,084349</td>
+                  <td>3:1</td>
+                </tr>
+
+                <tr class="cursor-pointer hover:bg-slate-50/5">
+                  <td>7</td>
+                  <td>
+                    <p class="text-lg font-bold">Trop Beau la vie</p>
+                    <p class="text-xs font-extralight">Lomepal,Romeo Elvis</p>
+                  </td>
+                  <td class="invisible sm:visible">784,084349</td>
+                  <td>2:59</td>
+                </tr>
+                <tr class="cursor-pointer hover:bg-slate-50/5">
+                  <td>8</td>
+                  <td>
+                    <p class="text-lg font-bold">cinq doingts</p>
+                    <p class="text-xs font-extralight">
+                      Lomepal,Philippe keterine
+                    </p>
+                  </td>
+                  <td class="invisible sm:visible">784,084349</td>
+                  <td>2:59</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <div class="flex justify-between gap-2 px-2">
+            <p class="font-extrabold">More By Lomepal</p>
+            <p>Discography</p>
+          </div>
+          <section class="grid grid-cols-2 gap-3 p-5 md:grid-cols-4">
+            <div
+              class="cursor-pointer rounded-lg bg-black/80 p-2 text-xs hover:bg-black/50"
+            >
+              <img
+                src="https://m.media-amazon.com/images/I/A1AT1xuPEDL._SX466_.jpg"
+                class="bg-fitt mx-auto w-full rounded-lg bg-no-repeat"
+              />
+              <p class="">Mauvaise Ondes</p>
+              <p class="text-gray-400">2023</p>
+            </div>
+            <div
+              class="cursor-pointer rounded-lg bg-black/80 p-2 text-xs hover:bg-black/50"
+            >
+              <img
+                src="https://m.media-amazon.com/images/I/91zQWwuWZrL._SX466_.jpg"
+                class="bg-fitt mx-auto w-full rounded-lg bg-no-repeat"
+              />
+              <p class="">Mauvaise Ondes</p>
+              <p class="text-gray-400">2023</p>
+            </div>
+
+            <div
+              class="cursor-pointer rounded-lg bg-black/80 p-2 text-xs hover:bg-black/50"
+            >
+              <img
+                src="https://m.media-amazon.com/images/I/61I0fnuHNdL._SX522_.jpg"
+                class="bg-fitt mx-auto w-full rounded-lg bg-no-repeat"
+              />
+              <p class="">Mauvaise Ondes</p>
+              <p class="text-gray-400">2023</p>
+            </div>
+
+            <div
+              class="cursor-pointer rounded-lg bg-black/80 p-2 text-xs hover:bg-black/50"
+            >
+              <img
+                src="https://m.media-amazon.com/images/I/315VD1a4YJL._UX500_FMwebp_QL85_.jpg"
+                class="bg-fitt mx-auto w-full rounded-lg bg-no-repeat"
+              />
+              <p class="">Amina</p>
+              <p class="text-gray-400">2023</p>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <footer
+        class="col-span-12 row-span-1 flex items-center justify-between bg-black p-4 text-lg text-white"
+      >
+        <section class="basis-1/3">
+          <div class="flex items-center justify-start gap-2">
+            <div>
+              <img
+                src="https://m.media-amazon.com/images/I/81it+V14HAL._SL1500_.jpg"
+                alt=""
+                class="contain w-10 rounded-lg"
+              />
+            </div>
+            <div class="hidden sm:block">
+              <h3 class="font-bold">La vérité</h3>
+              <p>Album. Lomepal</p>
+            </div>
+            <div>
+              <i class="bi bi-suit-heart-fill text-xl hover:text-green-600">
+              </i>
+            </div>
+          </div>
+        </section>
+        <!-- Section 2 -->
+        <section class="basis-1/3">
+          <div class="flex justify-center gap-3 md:text-xl">
+            <div>
+              <i class="fa-solid fa-shuffle"></i>
+            </div>
+            <div><i class="fa-solid fa-backward-step"></i></div>
+            <div><i class="bi bi-pause-circle-fill"></i></div>
+            <div>
+              <i class="fa-solid fa-forward-step"></i>
+            </div>
+            <div>
+              <i class="fa-solid fa-repeat"></i>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="basis-1/6">0:34</div>
+            <div class="h-1 basis-4/6 bg-slate-400">
+              <div class="h-full w-1/5 bg-white">&nbsp;</div>
+            </div>
+            <div class="basis-1/6">3:45</div>
+          </div>
+        </section>
+        <!-- section 3 -->
+        <section
+          class="text-md flex basis-1/3 items-center justify-end gap-1 md:text-lg"
+        >
+          <div class="hidden w-2/5 justify-end gap-2 sm:flex">
+            <div>
+              <i class="fas fa-microphone"></i>
+            </div>
+            <div><i class="fas fa-bars"></i></div>
+            <div>
+              <i class="bi bi-speaker"></i>
+            </div>
+            <div>
+              <i class="bi bi-volume-up"></i>
+            </div>
+          </div>
+          <div class="h-1 w-2/5 rounded-full bg-slate-500">
+            <div class="h-full w-5/6 rounded-full bg-slate-200">&nbsp;</div>
+          </div>
+          <div class="w-1/5">
+            <i class="bi bi-arrows-fullscreen"></i>
+          </div>
+        </section>
+      </footer>
+    </main>
+  </body>
+</html>
