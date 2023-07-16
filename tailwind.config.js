@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         primary: "#c30a17",
       },
+      border: {
+        dev: "3px solid black",
+      },
     },
   },
   plugins: [],
